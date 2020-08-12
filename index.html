@@ -1,35 +1,40 @@
 <!DOCTYPE html>  
 <html>  
 <body>  
-<h1>Important Note</h1>  
-<div>  
-<b>To:</b> <span id="to"></span><br>  
-<b>From:</b> <span id="from"></span><br>  
-<b>Message:</b> <span id="message"></span>  
-</div>  
-<script>  
-if (window.XMLHttpRequest)  
-  {// code for IE7+, Firefox, Chrome, Opera, Safari  
-  xmlhttp=new XMLHttpRequest();  
-  }  
-else  
-  {// code for IE6, IE5  
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");  
-  }  
-xmlhttp.open("GET","note.xml",false);  
-xmlhttp.send();  
-xmlDoc=xmlhttp.responseXML;  
+<h1>Bookings</h1>  
+<table id="demo" > </table>
+
+<script language="JavaScript">
+
+
+function loadXMLDoc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xmlhttp.open("GET", "note.xml", true);
+  xmlhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>Name</th><th>Email</th><th>Phone</th><th>Tour</th></tr>";
+  var x = xmlDoc.getElementsByTagName("booking");
+  for (i = 0; i <x.length; i++) { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("email")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+     x[i].getElementsByTagName("phone")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("tour")[0].childNodes[0].nodeValue+"</td><tr>";
+  }
+  document.getElementById("demo").innerHTML = table;
+}
+</script>
   
-document.getElementById("from").innerHTML=  
-xmlDoc.getElementsByTagName("from")[0].childNodes[0].nodeValue;  
-document.getElementById("message").innerHTML=  
-xmlDoc.getElementsByTagName("body")[0].childNodes[0].nodeValue;  
-
-document.getElementById("from").innerHTML=  
-xmlDoc.getElementsByTagName("from")[1].childNodes[0].nodeValue;  
-document.getElementById("message").innerHTML=  
-xmlDoc.getElementsByTagName("body")[1].childNodes[0].nodeValue;  
-
-</script>  
 </body>  
-</html>   
+</html> 
