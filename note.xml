@@ -23,7 +23,7 @@
     <phone>9873945789</phone>
     <tour>Charter fishing trip</tour>
     <airboat>small</airboat>
-    <npeople>5</npeople>
+    <npeople>4</npeople>
     <date>02-02-2020</date>
     <ttime>1:00pm</ttime>
     <hotel>xyz hotel</hotel>
@@ -38,6 +38,18 @@
     <npeople>6</npeople>
     <date>02-02-2020</date>
     <ttime>5:00pm</ttime>
+    <hotel>xyz hotel</hotel>
+    <pickup>yes</pickup>
+  </booking>
+   <booking>
+    <name>John Smith</name>
+    <email>john@gmail.com</email>
+    <phone>9873945789</phone>
+    <tour>Booze Cruise</tour>
+    <airboat>small</airboat>
+    <npeople>6</npeople>
+    <date>04-02-2020</date>
+    <ttime>8:00pm</ttime>
     <hotel>xyz hotel</hotel>
     <pickup>yes</pickup>
   </booking>
