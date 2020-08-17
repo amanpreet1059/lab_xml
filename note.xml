@@ -19,10 +19,9 @@
 <book>
   <booking>
     <name>John Smith</name>
-    <tour>Charter fishing trip</tour>
     <email>john@gmail.com</email>
     <phone>9873945789</phone>
-    <tour>Airboat</tour>
+    <tour>Charter fishing trip</tour>
     <airboat>small</airboat>
     <npeople>5</npeople>
     <date>02-02-2020</date>
