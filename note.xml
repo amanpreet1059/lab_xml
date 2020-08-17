@@ -2,25 +2,44 @@
 <!DOCTYPE book [
 
 <!ELEMENT book (booking)>
-<!ELEMENT booking (name,email,phone,tour)>
+<!ELEMENT booking (name,email,phone,tour,airboat,npeople,date,ttime,hotel,pickup)>
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT email (#PCDATA)>
 <!ELEMENT phone (#PCDATA)>
 <!ELEMENT tour (#PCDATA)>
+<!ELEMENT airboat (#PCDATA)>
+<!ELEMENT npeople (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT ttime (#PCDATA)>
+<!ELEMENT hotel (#PCDATA)>
+<!ELEMENT pickup (#PCDATA)>
 
 ]>
 
 <book>
- <booking>
-  <name>John Smith</name>
-  <email>john@gmail.com</email>
-  <phone>9873745789</phone>
-  <tour>Charter fishing trip</tour>
-</booking>
-<booking>
-  <name>JohnSmith</name>
-  <email>john@gmail.com</email>
-  <phone>9873945789</phone>
-  <tour>Airboat</tour>
-</booking>
+  <booking>
+    <name>John Smith</name>
+    <tour>Charter fishing trip</tour>
+    <email>john@gmail.com</email>
+    <phone>9873945789</phone>
+    <tour>Airboat</tour>
+    <airboat>small</airboat>
+    <npeople>4</npeople>
+    <date>02-02-2020</date>
+    <ttime>1:00pm</ttime>
+    <hotel>xyz hotel</hotel>
+    <pickup>no</pickup>
+  </booking>
+  <booking>
+    <name>John Smith</name>
+    <email>john@gmail.com</email>
+    <phone>9873945789</phone>
+    <tour>Airboat</tour>
+    <airboat>small</airboat>
+    <npeople>6</npeople>
+    <date>02-02-2020</date>
+    <ttime>5:00pm</ttime>
+    <hotel>xyz hotel</hotel>
+    <pickup>yes</pickup>
+  </booking>
 </book>
